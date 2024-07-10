@@ -1,0 +1,476 @@
+/* GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --main-color: #F0E3CA;
+    --bg-color: #1B1A17;
+    --text-color: #FF8303;
+    --sc-color: #A35709;
+    --poppins-font: "Poppins", sans-serif;
+    --font-style: "Coda", system-ui;
+}
+
+body {
+    font-family: var(--poppins-font);
+    color: var(--main-color);
+    background-color: var(--bg-color);
+}
+a {
+    text-decoration: none;
+}
+#main {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+.container {
+    max-width: 1200px;
+    padding: 16px;
+    margin: auto;
+}
+section {
+    margin: 0px auto;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+.nav-links a {
+    color: var(--main-color);
+    font-size: 1.5em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    padding: 0 10px;
+}
+.nav-links a:after {
+    content: "";
+    position: absolute;
+    background-color: var(--text-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: all 0.3s ease 0s;
+}
+.nav-links a:hover:after,
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-links a:focus:after {
+    width: 100%;
+    color: var(--text-color);
+}
+
+.btn-contact{
+    cursor:pointer;
+    position:relative;
+    padding:10px 20px;
+    background: transparent;
+    font-size: 1.5em;
+    color: var(--text-color);
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    transition:all 1s;
+        &:after,&:before{
+        content:" ";
+        width:10px;
+        height:10px;
+        position:absolute;
+        transition:all 1s ease 0s;
+        }
+        &:after{
+        top:-2px;
+        left:-2px;
+        border-top:4px solid var(--text-color);
+        border-left:4px solid var(--text-color);
+        }
+        &:before{
+        bottom:-2px;
+        right:-2px;
+        border-bottom:4px solid var(--text-color);
+        border-right:4px solid var(--text-color);
+        }
+        &:hover{
+        border-top-right-radius:0px;
+        border-bottom-left-radius:0px;
+        background: var(--sc-color);
+        color: var(--main-color);
+        &:before,&:after{
+        width:100%;
+        height:100%;
+        border-color:var(--text-color);
+        }
+    }
+}
+.logo {
+    font-size: 3rem;
+    font-family: var(--font-style);
+    font-weight: 800;
+    color: var(--text-color);
+    cursor: default;
+}
+
+/* MAIN PAGE */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+    color: var(--main-color);
+}
+
+.main-content .intro-head {
+    font-size: 30px;
+    font-weight: 400;
+    padding-bottom: 1rem;
+}
+.main-content .main-head {
+    font-size: 70px;
+    font-family: var(--font-style);
+    color: var(--text-color);
+}
+
+.main-content .main-head span {
+    position: relative;
+}
+.main-content .main-head span::before {
+    content: "Christian Jhay Tan";
+    color: var(--text-color);
+    animation: words 20s infinite;
+}
+.main-content .main-head span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: var(--bg-color);
+    border-left: 2px solid var(--text-color);
+    right: -10px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid #FF830300;
+    }
+}
+@keyframes words {
+    0%, 20% {
+        content: "Christian Jhay Tan";
+    }
+    21%, 40% {
+        content: "Christian Jhay Tan";
+    }
+    41%, 60% {
+        content: "Christian Jhay Tan";
+    }
+    61%, 80% {
+        content: "Christian Jhay Tan";
+    }
+    81%, 100% {
+        content: "Christian Jhay Tan";
+    }
+}
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95% {
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85% {
+        width: calc(100% + 8px);
+    }
+}
+
+.main-content .sub-head {
+    font-size: 30px;
+    font-weight: 400;
+    padding-top: 1rem;
+}
+.main-content img {
+    margin-top: 135px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width:520px) {
+    
+}
+
+/* ABOUT PAGE */
+#about {
+    background-color: var(--bg-color);
+    height: 85vh;
+}
+
+.about-head h1,
+.educ-head h1,
+.proj-head h1,
+.contact-head h1 {
+    font-size: 2.5em;
+    font-family: var(--font-style);
+    letter-spacing: 3px;
+    text-align: center;
+    color: var(--text-color);
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+.about-head .line,
+.educ-head .line,
+.contact-head .line {
+    background: var(--text-color);
+    height: 4px;
+    width: 150px;
+    border: 10px;
+    margin: auto;
+}
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    margin-top: 5rem;
+}
+.about-me {
+    width: 600px;
+    text-align: left;
+    margin-top: 4rem;
+    margin-left: 5rem;
+}
+.about-me h2 {
+    font-size: 2.5em;
+    color: var(--text-color);
+}
+.about-me p {
+    font-size: 18px;
+    text-align: justify;
+    opacity: 0.7;
+    margin-top: 20px;
+}
+
+.profile {
+    width: 60vh;
+    border-radius: 300px;
+    margin-left: 6em;
+}
+
+.btn-arrow {
+    position: relative;
+    top: 500px;
+    left: 550px;
+
+}
+
+/* EDUCATION PAGE */
+#education {
+    background-color: var(--bg-color);
+    height: 100vh;
+    margin-top: 4rem;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    margin-top: 3em;
+}
+
+.educ-card {
+    width: 330px;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--text-color);
+}
+.educ-img {
+    width: 100%;
+}
+.educ-img img {
+    width: 100%;
+    height: auto;
+}
+.educ-text {
+    padding: 20px;
+}
+.educ-card .educ-text h2 {
+    font-size: 26px;
+    font-family: var(--poppins-font);
+    margin-bottom: 10px;
+}
+.educ-card .educ-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: var(--main-color);
+    opacity: 0.8;
+}
+
+.educ-head .btn-arrow {
+    position: relative;
+    top: 510px;
+    left: 550px;
+}
+
+/* PROJECT PAGE */
+#project {
+    background-color: var(--text-color);
+    height: 90vh;
+}
+.proj-head h1{
+    color: var(--bg-color);
+}
+.proj-head .line {
+    background: var(--bg-color);
+    height: 4px;
+    width: 150px;
+    border: 10px;
+    margin: auto;
+}
+.proj-head .btn-arrow{
+    position: relative;
+    top: 440px;
+    left: 550px;
+}
+
+
+
+/* CONTACT PAGE */
+#contact{
+    background-color: var(--bg-color);
+    height: 100vh;
+}
+
+.contact-head p {
+    margin-top: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.8;
+    letter-spacing: 0.5px;
+    font-style: italic;
+}
+
+.contact-box {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    display: flex;
+    border-radius: 10px;
+}
+
+.contact-left {
+    flex-basis: 60%;
+    padding: 40px 60px;
+}
+.contact-left h3 {
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.contact-right {
+    flex-basis: 40%;
+    padding: 40px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.contact-right h3 {
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.contact-right .social{
+    margin-top: 10px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.input-row .input-group {
+    flex-basis: 45%;
+}
+.input-group span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 5px;
+    font-family: var(--poppins-font);
+    background-color: var(--main-color);
+}
+
+textarea {
+    width: 100%;
+    border: 2px solid var(--text-color);
+    background-color: var(--main-color);
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: var(--poppins-font);
+}
+label {
+    margin-bottom: 6px;
+    display: block;
+    font-family: var(--poppins-font);
+    color: var(--text-color);
+    opacity: 0.9;
+}
+button {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    width: 150px;
+    border: none;
+    outline: none;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease 0s;
+}
+button:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease 0s;
+}
+
+tr td:first-child {
+    padding-right: 25px;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 10vh;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer h3 {
+    font-size: 14px;
+}
+
+.social-links {
+    word-spacing: 1rem;
+}

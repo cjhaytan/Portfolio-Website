@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJ's Portfolio - Sample</title>
+    <!-- LINKS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <div id="main">
+        <div class="container">
+            <nav>
+                <h1 class="logo">CJT</h1>
+                <ul class="nav-links">
+                    <li><a href="#main">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#project">Projects</a></li>
+                </ul>
+                <a href="#contact" class="btn-contact">Contact Me</a>
+            </nav>
+            <!-- MAIN PAGE --> 
+            <div class="main-content">
+                <h4 class="intro-head">Hello, I'm</h4>
+                <h1 class="main-head"><span></span></h1>
+                <p class="sub-head">IT Student</p>
+            </div>
+        </div>
+    </div>
+    <!-- ABOUT PAGE -->
+    <section id="about">
+        <div class="container">
+            <div class="about-head">
+                <h1>About Me</h1>
+                <div class="line"></div>
+            </div>
+            <div class="about">
+                <div class="about-img">
+                    <img src="assets/me.png" alt="profile" class="profile">
+                </div>
+                <div class="about-me">
+                    <h2>Undergraduate Student</h2>
+                    <p>I’m 20 years old from Las Pinas City, Metro-Manila. 
+                        I’m taking a Bachelors degree in Information Technology Specialization in Mobile 
+                        and Web Applications at STI Las Pinas. I love watching Movies, 
+                        listening to Music, and playing Volleyball.
+                    </p>
+                </div>
+            </div>
+    </section>
+    <!-- EDUCATION PAGE -->
+    <section id="education">
+        <div class="container">
+            <div class="educ-head">
+                <h1>Education</h1>
+                <div class="line"></div>
+            </div>
+            <div class="card">
+                <div class="educ-card one">
+                    <div class="educ-img">
+                        <img src="assets/bb.jpg" alt="BettBien">
+                    </div>
+                    <div class="educ-text">
+                        <h2>BettBien Montessori</h2>
+                        <p>Graduated <br>A.Y. 2015 - 2016 
+                        <br> - Toward Excellence <br>
+                        - Sports Awardee (Volleyball) </p>
+                    </div>
+                </div>
+                <div class="educ-card two" >
+                    <div class="educ-img">
+                        <img src="assets/bbhs.jpg" alt="BettBien">
+                    </div>
+                    <div class="educ-text">
+                        <h2>BettBien High School</h2>
+                        <p>Graduated<br>A.Y. 2019 - 2020 <br>
+                        - with Honors</p>
+                    </div>
+                </div>
+                <div class="educ-card three">
+                    <div class="educ-img">
+                        <img src="assets/city-high.jpg" alt="City High">
+                    </div>
+                    <div class="educ-text">
+                        <h2>San Jose City - NHSHS</h2>
+                        <p>Graduated<br>A.Y. 2021 - 2022 <br>- with High Honors </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PROJECT PAGE -->
+    <section id="project">
+        <div class="container">
+            <div class="proj-head">
+                <h1>Projects</h1>
+                <div class="line"></div>
+            </div>
+            <div class="proj-content">
+
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT PAGE -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-head">
+                <h1>Contact Me</h1>
+                <div class="line"></div>
+                <p class="para-head">Please leave a message if you have something to say. Thank you!</p>
+            </div>
+            <div class="contact-box">
+                <div class="contact-left">
+                    <h3>Send me a message</h3>
+                    <!--FORM-->
+                    <form action="#">
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="Name">Name <span>(optional)</span></label>
+                                <input type="text" placeholder="Your name">
+                            </div>
+                            <div class="input-group">
+                                <label for="Phone">Phone Number</label>
+                                <input type="text" placeholder="+63 981-745-4563" required>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="Email">Email</label>
+                                <input type="email" placeholder="example@mail.com" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" placeholder="Purpose">
+                            </div>
+                        </div>
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="5" placeholder="Your message"></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-right">
+                    <h3>Contact Info</h3>
+                    <table>
+                        <tr>
+                            <td>Email</td>
+                            <td>christianjhaytan@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td>+63 961-775-2262 (SMART) <br>+63 994-453-5958 (DITO)</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>16th Jasmin St., Vergonville, Pulang Lupa Dos, Las Pinas City,
+                            Metro-Manila 1742</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <h3>&copy; 2024 Portfolio by Christian Jhay Tan All rights reserved </h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/cjhy.tn"><i class='bx bxl-facebook-circle'style="color:#FF8303"></i></a>
+                    <a href="https://www.instagram.com/_cjhaytan/"><i class='bx bxl-instagram' style="color:#FF8303" ></i></a>
+                    <a href="https://github.com/cjhaytan"><i class='bx bxl-github' style='color:#ff8303'  ></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '80px',
+            duration: 2500,
+            delay: 400
+        });
+        ScrollReveal().reveal('.about-head, .educ-head, .proj-head, .contact-head', { delay:500, origin:'top' });
+        ScrollReveal().reveal('.about-img, .one, .contact-left', { delay:500, origin:'left' });
+        ScrollReveal().reveal('.about-me, .three, .contact-right', { delay:500, origin:'right' });
+        ScrollReveal().reveal('.two, .para-head, .contact-box', { delay:500, origin:'bottom' });
+    </script>
+</body>
+</html>
